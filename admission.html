@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/admission.css">
+</head>
+<body>
+    <header class="bg-light py-5" style="background-image: url('../assets/header background.jpeg'); background-size: cover; background-repeat: no-repeat;">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-image: url('../assets/nav\ bar\ bg.jpeg'); background-size: cover; background-repeat: no-repeat; height: 100px;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <h1 style="color: aliceblue; "><img src="../assets/ABS logo.jpg" alt="ABC">CBSE School</h1>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <div>
+               <h1> <img src="../assets/ABS logo.jpg" alt="School Logo" style="max-width: 150px;">CBSE School</h1>
+            </div>
+            <a class="register" href="register.html"><img src="../assets/Register logo.png" alt=""><br> 
+                <span class="free">&#183; Free &#183;</span> 
+            </a>
+            <div>
+                <!-- Language Flags -->
+                <img src="../assets/hero.png" alt="English" style="width: 300px; height: 200px; margin-right: 5px;">
+                
+            </div>
+        </div>
+        
+        
+    </header>
+
+    <main class="flex-grow-1">
+        <section id="admission" class="container my-5">
+            <h2 class="text-center">Admission</h2>
+            <p class="text-center"><i class="fas fa-user-graduate text-primary"></i></p>
+            <!-- <form action="submit_admission_form.php" method="post" class="needs-validation" novalidate> -->
+            <form id="admissionForm" class="needs-validation" novalidate>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name"><i class="fas fa-user text-primary"></i> Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="age"><i class="fas fa-birthday-cake text-warning"></i> Age:</label>
+                        <input type="number" class="form-control" id="age" name="age" required>
+                        <div class="invalid-feedback">Please enter your age.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="class"><i class="fas fa-chalkboard text-success"></i> Class:</label>
+                        <input type="text" class="form-control" id="class" name="class" required>
+                        <div class="invalid-feedback">Please enter your class.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email"><i class="fas fa-envelope text-danger"></i> Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phone"><i class="fas fa-phone text-info"></i> Phone:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <div class="invalid-feedback">Please enter your phone number.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="address"><i class="fas fa-map-marker-alt text-secondary"></i> Address:</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                        <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="parent_name"><i class="fas fa-user-tie text-primary"></i> Parent/Guardian Name:</label>
+                        <input type="text" class="form-control" id="parent_name" name="parent_name" required>
+                        <div class="invalid-feedback">Please enter the parent/guardian name.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="parent_phone"><i class="fas fa-phone-alt text-warning"></i> Parent/Guardian Phone:</label>
+                        <input type="tel" class="form-control" id="parent_phone" name="parent_phone" required>
+                        <div class="invalid-feedback">Please enter the parent/guardian phone number.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="previous_school"><i class="fas fa-school text-success"></i> Previous School:</label>
+                        <input type="text" class="form-control" id="previous_school" name="previous_school" required>
+                        <div class="invalid-feedback">Please enter the previous school name.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="grade"><i class="fas fa-graduation-cap text-danger"></i> Previous Grade:</label>
+                        <input type="text" class="form-control" id="grade" name="grade" required>
+                        <div class="invalid-feedback">Please enter the previous grade.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="additional_info"><i class="fas fa-info-circle text-info"></i> Additional Information:</label>
+                    <textarea class="form-control" id="additional_info" name="additional_info" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-black text-center py-4">
+        <p>&copy; 2023 ABC CBSE School. All rights reserved.</p>
+        <p>123 ABC Street, City, Country | Phone: 80 10 19 0839 | Email: info@abcschool.com</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Bootstrap form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+<script>
+document.getElementById('admissionForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // stop actual submission
+    if (this.checkValidity() === false) {
+        event.stopPropagation();
+        this.classList.add('was-validated');
+    } else {
+        // Hide the form and show success message
+        this.reset(); // clear the form
+        this.style.display = 'none';
+
+        const successMsg = document.createElement('div');
+        successMsg.className = 'alert alert-success text-center mt-4';
+        successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Your admission form has been submitted successfully!';
+        document.querySelector('#admission').appendChild(successMsg);
+    }
+});
+</script>
+
+</body>
+</html>

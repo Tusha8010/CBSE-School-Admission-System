@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - ABC CBSE School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Fade-in animation for success message */
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Small hover animation on submit button */
+    button.btn-success:hover {
+      background-color: #28a745;
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <img src="../assets/ABS logo.jpg" alt="School Logo" style="max-width: 800px; height:200px; width: 1000px;padding-left: 0%;">
+      </div>
+      <div>
+        <img src="../assets/hero.png" alt="English" style="width: 300px; height: 200px; margin-right: 5px;">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="home.html"><img src="../assets/ABS logo.jpg" alt=""> CBSE School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="location.html"><i class="fa-light fa-location-dot" style="color: #74C0FC;"></i>Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-white py-5" style="background: url('../assets/hero-bg.jpg') no-repeat center center/cover;">
+    <div class="container">
+      <h1>Welcome to ABC CBSE School</h1>
+      <p>Providing quality education and a nurturing environment for students since 1982.</p>
+      <a href="about.html" class="btn btn-primary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Award-Winning Campuses Section -->
+  <section class="award-winning-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="../assets/kids.jpg" alt="Award Winning Campus" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2>Award-Winning Campuses</h2>
+          <p>As one of the best CBSE schools in India, ABC CBSE School has set a benchmark in the quality of education and the outstanding facilities it offers. With a well-structured curriculum, ultra-modern technologies, professional faculty, and organized management, ABC CBSE School has emerged as a pioneer institution.</p>
+          <a href="about.html" class="btn btn-success">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidebar Buttons -->
+  <div class="sidebar-buttons">
+    <a href="register.html" class="btn btn-primary mb-2">Register</a>
+    <a href="login.html" class="btn btn-warning">Login</a>
+  </div>
+
+  <!-- Parents' Prime Concern Section -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Parents' Prime Concern - SAFETY</h3>
+        <p>When sending your kids to boarding school becomes a prime option, then many factors arise which are to be looked upon. Among all, <strong>safety is the most important factor.</strong></p>
+        <p>Parents want the best for their child and a <strong>safe learning environment</strong> is something that hits in their list...</p>
+        <img src="../assets/boarding-schools-safety.gif" class="img-fluid rounded shadow mt-3" alt="School Safety">
+      </div>
+
+      <div class="col-md-4">
+        <h3>For Expert Advice</h3>
+        <form id="expertForm">
+          <div class="form-group">
+            <label for="name">Enter Name *</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Enter Parent Email Address *</label>
+            <input type="email" class="form-control" id="email" required placeholder="Enter Parent Email Address">
+          </div>
+          <div class="form-group">
+            <label for="phone">Enter Parent Mobile Number *</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">+91</span>
+              </div>
+              <input type="tel" class="form-control" id="phone" required placeholder="Enter Parent Mobile Number">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-block mt-3">SUBMIT</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="alert alert-success mt-3 text-center fade-in" style="display: none;">
+          <i class="fas fa-check-circle"></i> Your request has been submitted successfully!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container text-center">
+      <p>&copy; 2025 ABC CBSE School. All rights reserved.</p>
+      <p>Made with <span class="text-danger">&hearts;</span> by Web Glaze</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Form submit success effect
+    document.getElementById('expertForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Stop form reload
+
+      // Simple validation
+      if (this.checkValidity()) {
+        document.getElementById('successMessage').style.display = 'block';
+        this.reset();
+
+        // Hide message after 4 seconds
+        setTimeout(() => {
+          document.getElementById('successMessage').style.display = 'none';
+        }, 4000);
+      } else {
+        this.classList.add('was-validated');
+      }
+    });
+  </script>
+</body>
+</html>

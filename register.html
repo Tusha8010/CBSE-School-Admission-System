@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/regststyle.css" type="text/css">
+  <style>
+    body {
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      font-family: Arial, sans-serif;
+    }
+    section {
+      padding: 30px;
+      background-color: #ebf5fb;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    table {
+      width: 100%;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 120px;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"] {
+      background-color: green;
+    }
+    input[type="reset"] {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="page-nav">
+    <div class="container">
+      <a href="../html/home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html" class="active">Register</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1><img src="./assets/ABS logo.jpg" alt="" width="60"> CBSE SCHOOL</h1>
+      <a class="register" href="register.html">
+        Register <br> <span class="free">&#183; Free &#183;</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Registration Form -->
+  <section>
+    <h1>Register</h1>
+    <form id="registerForm">
+      <table cellspacing="20">
+        <tr>
+          <td><label for="Name">Name:</label></td>
+          <td><input type="text" id="Name" placeholder="Enter your full name" required></td>
+        </tr>
+        <tr>
+          <td><label for="pno">Phone No.:</label></td>
+          <td><input type="tel" id="pno" placeholder="9975******" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" placeholder="example@gmail.com" required></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" id="password" placeholder="*********" pattern="[A-Za-z0-9]{5,}" title="At least 5 characters with letters or numbers" required></td>
+        </tr>
+        <tr>
+          <td><label for="confirm-password">Confirm Password:</label></td>
+          <td><input type="password" id="confirm-password" placeholder="*********" required></td>
+        </tr>
+        <tr>
+          <td><label>Gender:</label></td>
+          <td>
+            <input type="radio" name="Gender" value="Male" required> Male
+            <input type="radio" name="Gender" value="Female"> Female
+            <input type="radio" name="Gender" value="Other"> Other
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dob">Date of Birth:</label></td>
+          <td><input type="date" id="dob" required></td>
+        </tr>
+        <tr>
+          <td><label>Hobbies:</label></td>
+          <td>
+            <input type="checkbox" name="Hobbies" value="Singing"> Singing
+            <input type="checkbox" name="Hobbies" value="Playing"> Playing
+            <input type="checkbox" name="Hobbies" value="Dancing"> Dancing
+          </td>
+        </tr>
+        <tr>
+          <td><label for="edu">Admission To Grade:</label></td>
+          <td>
+            <select id="edu" required>
+              <option value="">Select Grade</option>
+              <option>Pre KG</option><option>UKG</option><option>LKG</option>
+              <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+              <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
+              <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+              <option>Grade 10</option><option>Grade 11</option><option>Grade 12</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address">Address:</label></td>
+          <td><textarea id="address" cols="30" rows="5" placeholder="Enter your address" required></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <h1>CBSE School</h1>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white">About Us</a></li>
+            <li><a href="contact.html" class="text-white">Contact Us</a></li>
+            <li><a href="register.html" class="text-white">Admission</a></li>
+            <li><a href="location.html" class="text-white">Location</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2025 ABC CBSE School. All rights reserved.</p>
+        <p>Made with <span class="text-danger"></span> by JayShreeRam</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Password Validation + Save to LocalStorage -->
+  <script>
+    const form = document.getElementById('registerForm');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm-password');
+
+    // Validate passwords match
+    confirmPassword.addEventListener('input', () => {
+      if (password.value !== confirmPassword.value) {
+        confirmPassword.setCustomValidity("Passwords do not match");
+      } else {
+        confirmPassword.setCustomValidity("");
+      }
+    });
+
+    // Save user data to localStorage
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('Name').value;
+      const email = document.getElementById('email').value;
+      const pass = document.getElementById('password').value;
+
+      localStorage.setItem('userName', name);
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', pass);
+
+      alert('✅ Registration successful! Redirecting to Login Page...');
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
